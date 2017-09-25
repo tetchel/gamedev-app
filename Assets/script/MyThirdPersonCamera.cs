@@ -16,5 +16,6 @@ public class MyThirdPersonCamera : MonoBehaviour {
 	// LateUpdate is called once per frame after Update() is complete - set camera position AFTER player has moved
 	void LateUpdate () {
         transform.position = player.transform.position + offset;
+        //Debug.Log("Player " + player.transform.position + " Transform " + )
 	}
 }

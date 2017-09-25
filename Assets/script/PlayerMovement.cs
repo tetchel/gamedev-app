@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using PlayerAnimator;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour {
@@ -19,7 +18,7 @@ public class PlayerMovement : MonoBehaviour {
 		
 	}
 
-    // FixedUpdate pertains to physics
+    // FixedUpdate should be used instead of Update when dealing with Rigidbody
     void FixedUpdate() {
         // should these be called here or in Update() ?
         float horiz = Input.GetAxis("Horizontal");
