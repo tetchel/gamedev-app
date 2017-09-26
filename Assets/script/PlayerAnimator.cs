@@ -22,9 +22,10 @@ public class PlayerAnimator : MonoBehaviour {
     // Use this for initialization
     void Start() {
         animator = GetComponent<Animator>();
-        player = GetComponent<Rigidbody>();
+        //player = GetComponent<Rigidbody>();
     }
 
+    // LateUpdate so that input will be in by the time we animate
     void LateUpdate() {
         float horiz = Input.GetAxis("Horizontal");
         float vert = Input.GetAxis("Vertical");
