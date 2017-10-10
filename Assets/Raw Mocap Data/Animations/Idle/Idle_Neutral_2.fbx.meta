@@ -185,7 +185,7 @@ ModelImporter:
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
-    animationCompression: 3
+    animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
@@ -196,8 +196,8 @@ ModelImporter:
     - serializedVersion: 16
       name: Idle_Neutral_2
       takeName: _87_a_U1_M_P_idle_Neutral__Fb_p0_No_1
-      firstFrame: 338
-      lastFrame: 413
+      firstFrame: 937
+      lastFrame: 982
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
