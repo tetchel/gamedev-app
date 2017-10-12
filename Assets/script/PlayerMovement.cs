@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour {
     private const int FWD_SPEED = 5;
     private const int BWD_SPEED = 3;
     private const int HORZ_SPEED = 3;
+
     private const int TURN_SPEED = 4;
 
     // Use this for initialization
@@ -18,13 +19,12 @@ public class PlayerMovement : MonoBehaviour {
         rb = GetComponent<Rigidbody>();
     }
 
-    // LateUpdate so that input will be in by the time we animate
-    void LateUpdate() {
+    void FixedUpdate() {
         float horiz = Input.GetAxis("Horizontal");
         float vert = Input.GetAxis("Vertical");
         
         // Rotate the player based on mouse movement
-        rb.transform.Rotate(0, Input.GetAxis("Mouse X") * TURN_SPEED, 0);
+        rb.transform.Rotate(0, Input.GetAxis("Mouse X") * Constants.TURN_SPEED * Time.deltaTime, 0);
 
         animate(horiz, vert);
     }
@@ -63,6 +63,8 @@ public class PlayerMovement : MonoBehaviour {
 
     private void move(Vector3 direction, int speed) {
         rb.MovePosition(rb.transform.position + (direction * Time.deltaTime * speed));
+        //rb.velocity = direction * Time.deltaTime * speed;
+        //rb.AddForce(direction * speed);
     }
 
     private bool isSprinting() {
