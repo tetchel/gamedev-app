@@ -1,0 +1,29 @@
+TODO
+
+App 2
+- Computer control for evil_man
+	- Chase
+	- Run away and hide
+- Dart firing/tagging, obviously
+- UI for who is IT
+- Score (in time, IMO)
+- Timer
+- Go back to home screen on game completion
+- Home screen
+	- Leaderboard
+	- New Game
+	- Exit
+- ESC menu Restart/Exit
+
+Bugs: 
+- Rotating quickly (or in one direction?) moves crosshair away from player's rotation!!
+
+- ThirdPersonShooterCam should be bound to the player, not to the camera
+- Camera/crosshair logic should be decoupled from aiming (for the computer player)
+
+App 3
+- Y-axis aiming
+- Crouch/Jump/Sprint
+- Better environment
+- SFX/Music
+- Fix camera being blocked by stuff in the foreground
