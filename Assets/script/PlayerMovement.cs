@@ -12,11 +12,11 @@ public class PlayerMovement : MonoBehaviour {
 
     private const int FWD_SPEED = 5;
     private const int BWD_SPEED = 3;
-    private const int HORZ_SPEED = 3;
+    private const int HORZ_SPEED = 2;
 
     private const int TURN_SPEED = 4;
 
-    private const int GRAVITY = 10;
+    private const int GRAVITY = 30;
 
     // Use this for initialization
     void Start() {
@@ -83,13 +83,15 @@ public class PlayerMovement : MonoBehaviour {
 
     // Apply gravity and move the player in the given direction at the given speed
     private void move(Vector3 direction, int speed) {
+        // "gravity" - looks really bad
         direction.y -= GRAVITY * Time.deltaTime;
+
         direction.x *= speed;
         direction.z *= speed;
         controller.Move(direction * Time.deltaTime);
     }
 
     private bool isSprinting() {
-        return Input.GetButton("Fire1");
+        return false;
     }
 }
